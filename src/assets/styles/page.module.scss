@@ -1,7 +1,8 @@
-.page {
+@use '../styles/utils/vars' as *;
 
+.page {
   & .body {
-    background-color: #0A0A0A;
+    background-color: $darkBackground;
   }
 
   & .container {
@@ -16,5 +17,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  & .navLink.active {
+    color: $primaryColor;
   }
 }

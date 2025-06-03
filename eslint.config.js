@@ -25,6 +25,7 @@ export default tseslint.config(
       ],
       quotes: ['error', 'single'],
       'jsx-quotes': ['error', 'prefer-single'],
+      'tsx-quotes': ['error', 'prefer-single'],
     },
   }
 );
