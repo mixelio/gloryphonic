@@ -25,13 +25,13 @@ export const Navigation: React.FC<Props> = ({ menuStatus, setMenuStatus }) => {
           <NavLink to={'/artists'} className="navLink" onClick={closeNavigation}>
             Артисти
           </NavLink>
-          <NavLink to={'/sponsors'} className="navLink" onClick={closeNavigation}>
+          <NavLink to={'/sponsorship'} className="navLink" onClick={closeNavigation}>
             Спонсорство
           </NavLink>
           <NavLink to={'/contacts'} className="navLink" onClick={closeNavigation}>
             Контакти
           </NavLink>
-          <NavLink to={'/profile'} className="navLink" onClick={closeNavigation}>
+          <NavLink to={'/me'} className="navLink" onClick={closeNavigation}>
             Мій кабінет
           </NavLink>
         </div>

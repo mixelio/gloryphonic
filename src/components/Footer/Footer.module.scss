@@ -1,0 +1,96 @@
+@use '../../assets/styles/utils/vars' as *;
+@use '../../assets/styles/utils/mixins' as *;
+
+.footer {
+  position: relative;
+  padding-block: 24px;
+  width: 100%;
+
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 70%;
+    height: 1px;
+    background-color: $primaryColor;
+    opacity: 0.2;
+  }
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 24px;
+
+  @include on-desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
+.footerLogoLink {
+  display: block;
+}
+
+.socialContainer {
+  display: flex;
+  gap: 18px;
+
+  
+
+  & a {
+    transition-duration: 300ms;
+
+    @include on-desktop {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+
+  @include on-tablet {
+    align-items: center;
+  }
+
+  @include on-desktop {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.5;
+
+    transition-duration: 300ms;
+
+    @include on-tablet {
+      white-space: nowrap;
+    }
+
+    @include on-desktop {
+      &:not(:last-child) {
+        padding-inline-end: 16px;
+        border-inline-end: 1px solid #aaa;
+      }
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}

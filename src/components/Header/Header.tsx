@@ -13,9 +13,13 @@ export const Header = () => {
   
   return (
     <header className={styles.header}>
-      <TopAction menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
-      <Navigation menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
-      {isDesktop && <UserArea />}
+      <div className="container">
+        <div className={styles.headerContent}>
+          <TopAction menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
+          <Navigation menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
+          {isDesktop && <UserArea />}
+        </div>
+      </div>
     </header>
   );
 };

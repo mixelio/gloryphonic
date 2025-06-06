@@ -15,10 +15,34 @@
   @include on-desktop {
     display: flex;
     align-items: center;
+    
   }
 
   & a {
+    display: block;
+    padding-inline: 5px;
     font-size: 18px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 30%;
+      height: 1px;
+      background-color: $primaryColor;
+      translate: -50% 0;
+      scale: 0;
+      transition-duration: 300ms;
+    }
+    
+    &:hover {
+      &::before {
+        scale: 1;
+        translate: 0 0; 
+      }
+    }
 
     @include on-tablet {
       font-size: 24px; 
