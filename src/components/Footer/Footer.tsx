@@ -8,8 +8,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CallIcon from '@mui/icons-material/Call';
 import BusinessIcon from '@mui/icons-material/Business';
+import {useMediaQuery} from 'react-responsive';
 
 export const Footer = () => {
+  const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -31,17 +34,19 @@ export const Footer = () => {
           </div>
           <div className={styles.socialContainer}>
             <Link to="https://telegram.com" target="_blank">
-              <TelegramIcon />
+              <TelegramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
             <Link to="https://instagram.com" target="_blank">
-              <InstagramIcon />
+              <InstagramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
             <Link to="https://facebook.com" target="_blank">
-              <FacebookIcon />
+              <FacebookIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
           </div>
         </div>
-        <p style={{ textAlign: 'center', color: '#aaa' }}>© {new Date().getFullYear()} All rights reserved.</p>
+        <p style={{ textAlign: 'center', color: '#aaa' }}>
+          © {new Date().getFullYear()} All rights reserved.
+        </p>
       </div>
     </footer>
   );

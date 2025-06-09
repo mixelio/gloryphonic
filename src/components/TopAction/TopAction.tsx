@@ -4,21 +4,18 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { theme } from '../../theme';
 import styles from './TopAction.module.scss';
 import {useMediaQuery} from 'react-responsive';
-import type {MenuStatus} from '../Header/Header';
 import {LogoLink} from '../LogoLink/LogoLink';
+import {useStore} from '../../app/store';
 
 const primaryColors = theme.palette.primary;
 
-type Props = {
-  menuStatus: MenuStatus;
-  setMenuStatus: React.Dispatch<React.SetStateAction<MenuStatus>>;
-};
-
-export const TopAction: React.FC<Props> = ({menuStatus, setMenuStatus}) => {
+export const TopAction = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
+  const menuStatus = useStore(state => state.menuStatus);
+  const setMenuStatus = useStore(state => state.changeMenuStatus)
 
   const menuToggle = () => {
-    setMenuStatus(prevStatus => (prevStatus === 'open' ? 'close' : 'open'));
+    setMenuStatus(menuStatus === 'open' ? 'close' : 'open');
   }
 
   return (

@@ -1,0 +1,18 @@
+@use '../../assets/styles/utils/mixins' as *;
+
+.userArea {
+  border: 1px solid transparent;
+}
+
+.userActionBtns {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+
+  @include on-desktop {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+}

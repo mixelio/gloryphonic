@@ -4,6 +4,10 @@
 .page {
   & .body {
     background-color: $darkBackground;
+
+    &:has(nav.open) {
+      overflow: hidden;
+    }
   }
 
   & .container {

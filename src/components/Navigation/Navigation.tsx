@@ -1,15 +1,16 @@
 import {NavLink} from 'react-router-dom'
 import styles from './Navigation.module.scss'
-import type {MenuStatus} from '../Header/Header';
+import {UserArea} from '../UserArea/UserArea';
+import {useStore} from '../../app/store';
+import {useMediaQuery} from 'react-responsive';
 
-type Props = {
-  menuStatus: MenuStatus;
-  setMenuStatus: React.Dispatch<React.SetStateAction<MenuStatus>>;
-};
+export const Navigation = () => {
+  const menuStatus = useStore(state => state.menuStatus)
+  const setMenuStatus = useStore(state => state.changeMenuStatus)
+  const isDesktop = useMediaQuery({ query: '(min-width: 1200px'});
 
-export const Navigation: React.FC<Props> = ({ menuStatus, setMenuStatus }) => {
   const closeNavigation = () => {
-    setMenuStatus('close');
+    setMenuStatus('close')
   };
 
   return (
@@ -31,9 +32,8 @@ export const Navigation: React.FC<Props> = ({ menuStatus, setMenuStatus }) => {
           <NavLink to={'/contacts'} className="navLink" onClick={closeNavigation}>
             Контакти
           </NavLink>
-          <NavLink to={'/me'} className="navLink" onClick={closeNavigation}>
-            Мій кабінет
-          </NavLink>
+
+          {!isDesktop && <UserArea />}
         </div>
       </div>
 

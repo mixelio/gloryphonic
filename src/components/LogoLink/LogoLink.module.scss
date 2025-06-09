@@ -1,6 +1,12 @@
+@use '../../assets/styles/utils/mixins' as *;
+
 .logoLink {
   display: block;
   width: 96px;
+
+  @include on-desktop {
+    width: 128px;
+  }
 
   img {
     width: 100%;

@@ -48,6 +48,7 @@
     transition-duration: 300ms;
 
     @include on-desktop {
+
       &:hover {
         color: $primaryColor;
       }
