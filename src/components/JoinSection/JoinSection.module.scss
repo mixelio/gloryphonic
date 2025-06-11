@@ -1,0 +1,95 @@
+@use '../../assets/styles/utils/mixins' as *;
+@use '../../assets/styles/utils/vars' as *;
+
+// .joinSection {
+  
+// }
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  word-wrap: balance;
+  margin-block-end: 1rem;
+
+  @include on-tablet {
+    font-size: 2.5rem;
+    margin-block-end: 2rem;
+  }
+}
+
+.intruductionText {
+  max-width: 720px;
+  text-align: center;
+  margin-inline: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: none;
+  visibility: hidden;
+}
+
+.joinSteps {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+
+  @include on-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    justify-content: center;
+  }
+}
+
+.joinStep {
+  position: relative;
+  padding: 28px 18px;
+  background-color: $lightDarkBg;
+  border-radius: 10px;
+
+  @include on-tablet {
+    flex: 1 1 48%;
+    padding-inline-start: 70px;
+    max-width: 570px;
+  }
+}
+
+.joinStepTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-block-end: 25px;
+}
+
+.joinStepNumber {
+  flex: 0 0 28px;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  background-color: $primaryColor;
+  border-radius: 5px;
+  color: $darkBackground;
+  aspect-ratio: 1 / 1;
+  width: 28px;
+  font-size: 18px;
+  font-family: Tektur;
+
+  @include on-tablet {
+    position: absolute;
+    top: 28px;
+    left: 18px;
+    width: 38px;
+    font-size: 28px;
+  }
+
+}
+
+.joinStepTitel {
+  font-family: Tektur;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+

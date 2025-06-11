@@ -7,11 +7,30 @@ import {useMediaQuery} from 'react-responsive'
 import LogoutIcon from '@mui/icons-material/Logout'
 
 export const UserArea = () => {
+  const [userIn, setUserIn] = useState(false);
   const setMenuStatus = useStore(state => state.changeMenuStatus)
   const [loginedUser, setLoginedUser] = useState<string | null>(localStorage.getItem('loginedUser') || null)
   const navigate = useNavigate()
 
   const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
+
+  const handleLogin = async () => {
+    setUserIn(true);
+    
+    await setTimeout(() => {
+      localStorage.setItem('loginedUser', '88');
+      setLoginedUser('88');
+      setMenuStatus('close');
+      navigate(loginedUser ? `artists/${loginedUser}` : '/');
+      setUserIn(false);
+    }, 2000);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('loginedUser');
+    setLoginedUser(null);
+    window.location.reload()
+  }
 
   return (
     <div className={styles.userArea}>
@@ -31,7 +50,7 @@ export const UserArea = () => {
             }}
           >
             <Link
-              to={`/artists/${loginedUser}`}
+              to={`me`}
               style={{ color: 'inherit', textDecoration: 'none', whiteSpace: 'nowrap' }}
             >
               Мій кабінет
@@ -43,6 +62,7 @@ export const UserArea = () => {
               textTransform: 'capitalize',
               fontSize: '1rem',
             }}
+            onClick={handleLogout}
           >
             {!isDesktop ? 'Вийти' : <LogoutIcon />}
           </Button>
@@ -50,20 +70,17 @@ export const UserArea = () => {
       ) : (
         <Button
           variant="contained"
+          className={styles.button}
           sx={{
             backgroundColor: '#FBB348',
             color: '#000',
             textTransform: 'capitalize',
             fontSize: '1rem',
           }}
-          onClick={() => {
-            localStorage.setItem('loginedUser', '88');
-            setLoginedUser('88');
-            navigate(loginedUser ? `artists/${loginedUser}` : '/');
-            setMenuStatus('close');
-          }}
+          loading={userIn}
+          onClick={handleLogin}
         >
-          Login
+          Увійти
         </Button>
       )}
     </div>

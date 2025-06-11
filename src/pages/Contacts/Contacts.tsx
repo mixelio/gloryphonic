@@ -1,7 +1,7 @@
 export const Contacts = () => {
   return (
-    <>
-      <h1>Contacts page</h1>
-    </>
+    <div className='contactsPage'>
+      <h1 className='pageTitle'>Contacts page</h1>
+    </div>
   )
 }

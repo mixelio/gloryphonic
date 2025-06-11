@@ -1,7 +1,7 @@
 export const Sponsorship = () => {
   return (
-    <>
-      <h1>Sponsorships page</h1>
-    </>
+    <div className='sponsorshipPage'>
+      <h1 className='pageTitle'>Sponsorships page</h1>
+    </div>
   )
 }
