@@ -1,0 +1,14 @@
+.logoLink {
+  display: block;
+  width: 96px;
+}
+@media (min-width: 1200px) {
+  .logoLink {
+    width: 128px;
+  }
+}
+.logoLink img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=LogoLink.module.css.map */

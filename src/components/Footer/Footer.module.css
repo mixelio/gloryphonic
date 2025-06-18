@@ -1,0 +1,89 @@
+.footer {
+  position: relative;
+  padding-block: 24px;
+  width: 100%;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 70%;
+  height: 1px;
+  background-color: #FBB348;
+  opacity: 0.2;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 24px;
+}
+@media (min-width: 1200px) {
+  .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
+.footerLogoLink {
+  display: block;
+}
+
+.socialContainer {
+  display: flex;
+  gap: 18px;
+}
+.socialContainer a {
+  transition-duration: 300ms;
+}
+@media (min-width: 1200px) {
+  .socialContainer a:hover {
+    color: #FBB348;
+  }
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+@media (min-width: 640px) {
+  .contactsContainer {
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .contactsContainer {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+.contactsContainer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.5;
+  transition-duration: 300ms;
+}
+@media (min-width: 640px) {
+  .contactsContainer a {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  .contactsContainer a:not(:last-child) {
+    padding-inline-end: 16px;
+    border-inline-end: 1px solid #aaa;
+  }
+  .contactsContainer a:hover {
+    color: #FBB348;
+  }
+}
+
+/*# sourceMappingURL=Footer.module.css.map */

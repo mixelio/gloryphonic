@@ -8,6 +8,9 @@
     &:has(nav.open) {
       overflow: hidden;
     }
+    &:has(dialog.opened) {
+      overflow: hidden;
+    }
   }
 
   & .container {

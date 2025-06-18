@@ -1,16 +1,16 @@
-import {NavLink} from 'react-router-dom'
-import styles from './Navigation.module.scss'
-import {UserArea} from '../UserArea/UserArea';
-import {useStore} from '../../app/store';
-import {useMediaQuery} from 'react-responsive';
+import { NavLink } from 'react-router-dom';
+import styles from './Navigation.module.scss';
+import { UserArea } from '../UserArea/UserArea';
+import { useStore } from '../../app/store';
+import { useMediaQuery } from 'react-responsive';
 
 export const Navigation = () => {
-  const menuStatus = useStore(state => state.menuStatus)
-  const setMenuStatus = useStore(state => state.changeMenuStatus)
-  const isDesktop = useMediaQuery({ query: '(min-width: 1200px'});
+  const menuStatus = useStore((state) => state.menuStatus);
+  const setMenuStatus = useStore((state) => state.changeMenuStatus);
+  const isDesktop = useMediaQuery({ query: '(min-width: 1200px' });
 
   const closeNavigation = () => {
-    setMenuStatus('close')
+    setMenuStatus('close');
   };
 
   return (

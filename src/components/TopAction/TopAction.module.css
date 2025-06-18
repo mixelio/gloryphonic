@@ -1,0 +1,16 @@
+.topAction {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100%;
+}
+.logo img {
+  height: 100%;
+}
+
+/*# sourceMappingURL=TopAction.module.css.map */

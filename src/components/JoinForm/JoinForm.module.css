@@ -1,0 +1,24 @@
+.joinFormDialog {
+  position: fixed;
+  transition-duration: 300ms;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+.joinFormDialog h2 {
+  font-size: 32px;
+  padding: 0;
+}
+
+.joinFormDialogPaper {
+  box-sizing: border-box;
+  background-color: green;
+  border-radius: 20px;
+}
+
+.joinFormBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/*# sourceMappingURL=JoinForm.module.css.map */

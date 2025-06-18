@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Tektur:wght@400..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+span:hover {
+  cursor: default;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+select {
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  appearance: none;
+}
+
+option {
+  appearance: none;
+}
+
+body {
+  font-family: Comfortaa, sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tektur, sans-serif;
+}
+
+.page .body {
+  background-color: #0A0A0A;
+}
+.page .body:has(nav.open) {
+  overflow: hidden;
+}
+.page .body:has(dialog.opened) {
+  overflow: hidden;
+}
+.page .container {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.page .mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .page .navLink.active {
+    color: #FBB348;
+  }
+}
+.page .pageTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.navigation {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 96px);
+  padding-block: 64px;
+  background-color: #0A0A0A;
+  transition: translate 0.3s ease-in-out;
+  z-index: 100;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+}
+.navigation::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-block: 0;
+  }
+}
+.navigation a {
+  display: block;
+  padding-inline: 5px;
+  font-size: 18px;
+  position: relative;
+}
+.navigation a::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30%;
+  height: 1px;
+  background-color: #FBB348;
+  translate: -50% 0;
+  scale: 0;
+  transition-duration: 300ms;
+}
+.navigation a:hover::before {
+  scale: 1;
+  translate: 0 0;
+}
+@media (min-width: 640px) {
+  .navigation a {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation a {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: transparent;
+    height: 100%;
+    padding-block-start: 0;
+    width: max-content;
+  }
+}
+
+.linksContainer {
+  padding-inline: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+@media (min-width: 1200px) {
+  .linksContainer {
+    flex-direction: row;
+    padding-inline: 0;
+  }
+}
+
+.topActionContainer {
+  width: 100%;
+  height: 64px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 28px;
+  right: 21px;
+}
+
+.open {
+  translate: 0 0;
+}
+
+.close {
+  translate: -100% 0;
+}
+
+/*# sourceMappingURL=App.css.map */

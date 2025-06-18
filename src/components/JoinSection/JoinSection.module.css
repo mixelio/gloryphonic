@@ -1,10 +1,3 @@
-@use '../../assets/styles/utils/mixins' as *;
-@use '../../assets/styles/utils/vars' as *;
-
-// .joinSection {
-  
-// }
-
 .sectionTitle {
   font-size: 1.5rem;
   font-weight: bold;
@@ -12,8 +5,9 @@
   max-width: 640px;
   margin-inline: auto;
   margin-block-end: 1rem;
-
-  @include on-tablet {
+}
+@media (min-width: 640px) {
+  .sectionTitle {
     font-size: 2.5rem;
     margin-block-end: 2rem;
   }
@@ -34,8 +28,9 @@
   flex-direction: column;
   row-gap: 18px;
   margin-block-end: 16px;
-
-  @include on-tablet {
+}
+@media (min-width: 640px) {
+  .joinSteps {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 36px;
@@ -47,10 +42,11 @@
 .joinStep {
   position: relative;
   padding: 28px 18px;
-  background-color: $lightDarkBg;
+  background-color: #1F1F1F;
   border-radius: 10px;
-
-  @include on-tablet {
+}
+@media (min-width: 640px) {
+  .joinStep {
     flex: 1 1 48%;
     padding-inline-start: 70px;
     max-width: 570px;
@@ -70,14 +66,15 @@
   display: grid;
   align-content: center;
   text-align: center;
-  background-color: $primaryColor;
+  background-color: #FBB348;
   border-radius: 5px;
-  color: $darkBackground;
-  aspect-ratio: 1 / 1;
+  color: #0A0A0A;
+  aspect-ratio: 1/1;
   width: 28px;
   font-size: 18px;
-
-  @include on-tablet {
+}
+@media (min-width: 640px) {
+  .joinStepNumber {
     position: absolute;
     top: 28px;
     left: 18px;
@@ -92,16 +89,14 @@
   line-height: 1.2;
 }
 
-.joinButton{
+.joinButton {
   line-height: 1;
   transition-duration: 0.3s;
   font-size: 2rem;
-
-  &:hover {
-    box-shadow: 0 0 1px $primaryColor;
-    background-color: transparent;
-  }
+}
+.joinButton:hover {
+  box-shadow: 0 0 1px #FBB348;
+  background-color: transparent;
 }
 
-
-
+/*# sourceMappingURL=JoinSection.module.css.map */

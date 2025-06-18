@@ -1,0 +1,24 @@
+.userArea {
+  border: 1px solid transparent;
+}
+
+.userActionBtns {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 1200px) {
+  .userActionBtns {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 8px;
+  }
+}
+
+.button:is(.MuiButton-loading) {
+  border: 1px solid #FBB348;
+  background-color: #FBB348;
+}
+
+/*# sourceMappingURL=UserArea.module.css.map */

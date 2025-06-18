@@ -7,15 +7,22 @@
   left: 0;
   width: 100vw;
   height: calc(100vh - 96px);
-  padding-top: 64px;
+  padding-block: 64px;
   background-color: $darkBackground;
   transition: translate 0.3s ease-in-out;
   z-index: 100;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include on-desktop {
     display: flex;
     align-items: center;
-    
+    overflow: hidden;
+    padding-block: 0;
   }
 
   & a {
