@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Tektur:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Days+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -130,9 +130,35 @@ body {
   color: #fff;
   font-size: 1rem;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Tektur, sans-serif;
+body.Montserrat h1, body.Montserrat h2, body.Montserrat h3, body.Montserrat h4, body.Montserrat h5, body.Montserrat h6 {
+  font-family: "Montserrat", sans-serif;
+}
+body.Montserrat button.MontserratBtn {
+  color: #FBB348;
+}
+body.Days h1, body.Days h2, body.Days h3, body.Days h4, body.Days h5, body.Days h6 {
+  font-family: "Days One", sans-serif;
+}
+body.Days button.DaysBtn {
+  color: #FBB348;
+}
+body.Prosto h1, body.Prosto h2, body.Prosto h3, body.Prosto h4, body.Prosto h5, body.Prosto h6 {
+  font-family: "Prosto One", sans-serif;
+}
+body.Prosto button.ProstoBtn {
+  color: #FBB348;
+}
+body.Russo h1, body.Russo h2, body.Russo h3, body.Russo h4, body.Russo h5, body.Russo h6 {
+  font-family: "Russo One", sans-serif;
+}
+body.Russo button.RussoBtn {
+  color: #FBB348;
+}
+body.Raleway h1, body.Raleway h2, body.Raleway h3, body.Raleway h4, body.Raleway h5, body.Raleway h6 {
+  font-family: "Raleway", sans-serif;
+}
+body.Raleway button.RalewayBtn {
+  color: #FBB348;
 }
 
 .page .body {
@@ -143,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .page .body:has(dialog.opened) {
   overflow: hidden;
+}
+.page .body button {
+  background-color: transparent;
+  color: #aaaaaa;
 }
 .page .container {
   max-width: 1600px;

@@ -11,6 +11,11 @@
     &:has(dialog.opened) {
       overflow: hidden;
     }
+    & button {
+      background-color: transparent;
+      color: #aaaaaa;
+    }
+
   }
 
   & .container {
