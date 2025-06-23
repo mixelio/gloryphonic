@@ -1,0 +1,62 @@
+@use '../../../assets/styles/utils/vars' as *;
+@use '../../../assets/styles/utils/mixins' as *;
+
+.firstScreenSection {
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 0%, $darkBackground 100%),
+                    (url('../../../assets/images/content/first-image.jpg'));
+  background-size: cover;
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  @include on-tablet {
+    background-image: linear-gradient(to right, transparent 20%, $darkBackground 70%),
+                      linear-gradient(to left, transparent 80%, $darkBackground 90%),
+                      linear-gradient(to bottom, transparent 20%, $darkBackground 100%),
+                      (url('../../../assets/images/content/first-image.jpg'));
+    min-height: 80vh;
+  }
+}
+
+.info {
+  position: absolute;
+  width: 100%;
+  background-image: radial-gradient(at 30% 50%, $primaryColor -100%, transparent 35%);
+
+  bottom: 20px;
+  text-align: center;
+
+  @include on-tablet {
+    text-align: left;
+    left: auto;
+    right: 20px;
+    width: 50%;
+    top: 50%;
+    translate: 0 -50%;
+    background-image: radial-gradient(at 30% 70%, $primaryColor -100%, transparent 35%);
+  }
+
+  @include on-desktop {
+    width: 40%;
+    background-image: radial-gradient(500px 200px at 40% 30%, $primaryColor -140%, transparent 35%);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: 700;
+    margin-block-end: 28px;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-block-end: 36px;
+    line-height: 1.2;
+  }
+
+  button {
+    line-height: 1;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

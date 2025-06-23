@@ -2,6 +2,7 @@ import styles from './JoinForm.module.scss';
 import { useStore } from '../../app/store.ts';
 import { Box, Button, Dialog, DialogTitle, TextField, Paper } from '@mui/material';
 import { type ChangeEvent, type FormEvent, useRef, useState } from 'react';
+import { sentRequestForJoin } from '../../api/users.ts';
 
 export const JoinForm = () => {
   const { isJoinFormOpen, toggleJoinFormOpen } = useStore();
@@ -46,14 +47,21 @@ export const JoinForm = () => {
     toggleJoinFormOpen(false);
   };
 
-  const getOnSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const getOnSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formDataForSend = new FormData(e.currentTarget);
     if (formDataForSend.get('name')?.toString().trim().length === 0) {
-      console.log('Введіть імʼя або назву гурту');
+      console.error('enter a correct name');
       return;
     }
-    console.log(formDataForSend.get('name'), formDataForSend.get('email'));
+
+    try {
+      await sentRequestForJoin(formDataForSend);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      handleClear();
+    }
   };
 
   return (
