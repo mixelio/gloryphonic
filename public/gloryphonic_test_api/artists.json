@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "CryNeba",
+    "genre": "Soft Rock",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "/images/cry_neba.jpg",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Echoes of Tomorrow",
+        "release_date": "2023-01-15",
+        "cover_image": "https://example.com/images/echoes_of_tomorrow.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "release_date": "2022-06-20",
+        "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Генадій Гвоздь",
+    "genre": "Rock",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "/images/Genady_Hvosd.jpg",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Echoes of Tomorrow",
+        "release_date": "2023-01-15",
+        "cover_image": "https://example.com/images/echoes_of_tomorrow.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "release_date": "2022-06-20",
+        "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Дарія Рева",
+    "genre": "Pop",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "/images/daria_reva.jpg",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Echoes of Tomorrow",
+        "release_date": "2023-01-15",
+        "cover_image": "https://example.com/images/echoes_of_tomorrow.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "release_date": "2022-06-20",
+        "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Сергій Львов",
+    "genre": "Soft Rock",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "/images/sergii_lvov.webp",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Echoes of Tomorrow",
+        "release_date": "2023-01-15",
+        "cover_image": "https://example.com/images/echoes_of_tomorrow.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "release_date": "2022-06-20",
+        "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Unknown Artist",
+    "genre": "Soft Rock",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "/images/unknown.webp",
+    "albums": [
+      {
+        "id": 1,
+        "title": "Echoes of Tomorrow",
+        "release_date": "2023-01-15",
+        "cover_image": "https://example.com/images/echoes_of_tomorrow.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Whispers in the Wind",
+        "release_date": "2022-06-20",
+        "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ]
+  }
+]

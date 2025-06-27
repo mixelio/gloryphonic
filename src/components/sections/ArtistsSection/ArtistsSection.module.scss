@@ -1,0 +1,149 @@
+@use '../../../assets/styles/utils/mixins' as *;
+@use '../../../assets/styles/utils/vars' as *;
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-block-end: 1rem;
+
+  @include on-tablet {
+    justify-content: flex-start;
+    margin-block-end: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+
+}
+
+.linkToArtists {
+  font-size: 1.2rem;
+  color: $primaryColor;
+  text-transform: lowercase;
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+
+  @include on-tablet {
+    margin-inline: 0;
+  }
+}
+
+
+
+.embla {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 100%;
+    background-image: linear-gradient(to right, $darkBackground 0%, transparent 100%);
+    z-index: 5;
+
+    @include on-tablet {
+      width: 20%;
+    }
+
+    @include on-desktop {
+      width: 10%;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12%;
+    height: 100%;
+    background-image: linear-gradient(to left, $darkBackground 0%, transparent 100%);
+    z-index: 5;
+
+    @include on-tablet {
+      width: 20%;
+    }
+
+    @include on-desktop {
+      width: 10%;
+    }
+  }
+}
+.embla__viewport {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+}
+.embla__container {
+  display: flex;
+  width: 100%;
+}
+
+.embla__slide {
+  flex: 0 0 75%;
+  min-width: 0;
+  margin-right: 1rem;
+
+  @include on-tablet {
+    flex: 0 0 50%;
+  }
+
+  @include on-desktop {
+    flex: 0 0 30%;
+  }
+}
+
+.embla__prev, .embla__next {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50% ;
+  z-index: 6;
+  height: 10%;
+
+}
+
+.embla__prev {
+  left: 0;
+}
+
+.embla__next {
+  right: 0;
+}
+
+.embla__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  translate: 0 -20px;
+
+  @include on-tablet {
+    justify-content: flex-end;
+    translate: 0 0;
+  }
+}
+
+.embla__dot {
+  width: 16px;
+  height: 10px;
+  background-color: #aaaaaa;
+  opacity: 0.5;
+  transition-duration: 300ms;
+}
+
+.active__dot {
+    border-radius: 10%;
+    background-color: $primaryColor;
+    opacity: 1;
+}

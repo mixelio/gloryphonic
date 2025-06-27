@@ -34,7 +34,8 @@
     width: 50%;
     top: 50%;
     translate: 0 -50%;
-    background-image: radial-gradient(at 30% 70%, $primaryColor -100%, transparent 35%);
+    //background-image: radial-gradient(at 30% 70%, $primaryColor -100%, transparent 35%);
+    background-image: none;
   }
 
   @include on-desktop {

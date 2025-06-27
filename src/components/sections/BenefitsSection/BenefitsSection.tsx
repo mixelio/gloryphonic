@@ -1,5 +1,6 @@
 import styles from './Benefits.module.scss';
 import { benefits } from '../../../data/benefits.ts';
+import { Benefit } from '../../Benefit/Benefit.tsx';
 
 export const BenefitsSection = () => {
   return (
@@ -7,11 +8,7 @@ export const BenefitsSection = () => {
       <div className="container">
         <div className={styles.benefitsContent}>
           {benefits.map((item) => (
-            <div className={styles.benefit} key={item.id}>
-              <img src={item.image} alt="guitar-player" />
-              <h2>{item.name}</h2>
-              <p>{item.description}</p>
-            </div>
+            <Benefit key={item.id} item={item} />
           ))}
         </div>
       </div>

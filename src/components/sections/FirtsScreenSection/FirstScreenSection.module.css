@@ -28,7 +28,7 @@
     width: 50%;
     top: 50%;
     translate: 0 -50%;
-    background-image: radial-gradient(at 30% 70%, #FBB348 -100%, transparent 35%);
+    background-image: none;
   }
 }
 @media (min-width: 1200px) {
