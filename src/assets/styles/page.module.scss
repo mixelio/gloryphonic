@@ -4,6 +4,7 @@
 .page {
   & .body {
     background-color: $darkBackground;
+    overflow-y: scroll;
 
     &:has(nav.open) {
       overflow: hidden;
@@ -39,5 +40,11 @@
     font-weight: 600;
     text-align: center;
     margin-block-end: 20px;
+  }
+
+  & .sectionTitle {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1.5;
   }
 }

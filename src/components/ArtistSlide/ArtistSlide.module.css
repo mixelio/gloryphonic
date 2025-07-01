@@ -18,7 +18,7 @@
   position: absolute;
   top: 0;
   left: -1px;
-  width: 101%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -34,12 +34,15 @@
   bottom: 30%;
   translate: -50% 0;
   z-index: 2;
+  transition-duration: 300ms;
   font-weight: 500;
   font-size: 2rem;
 }
 .artistSlide:hover img {
   opacity: 1;
-  scale: 1.01;
+}
+.artistSlide:hover h3 {
+  letter-spacing: 1.5px;
 }
 
 /*# sourceMappingURL=ArtistSlide.module.css.map */

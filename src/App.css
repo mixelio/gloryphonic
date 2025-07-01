@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page .body {
   background-color: #0A0A0A;
+  overflow-y: scroll;
 }
 .page .body:has(nav.open) {
   overflow: hidden;
@@ -166,6 +167,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-align: center;
   margin-block-end: 20px;
+}
+.page .sectionTitle {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .mainContent {

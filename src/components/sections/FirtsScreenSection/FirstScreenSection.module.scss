@@ -23,7 +23,7 @@
   position: absolute;
   width: 100%;
   background-image: radial-gradient(at 30% 50%, $primaryColor -100%, transparent 35%);
-
+  height: fit-content;
   bottom: 20px;
   text-align: center;
 
@@ -49,6 +49,8 @@
     margin-block-end: 28px;
   }
   p {
+    width: 90%;
+    margin-inline: auto;
     font-size: 1.2rem;
     margin-block-end: 36px;
     line-height: 1.2;
