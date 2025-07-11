@@ -18,6 +18,7 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
   const [alertMessage, setAlertMessage] = useState('');
   const [alertStatus, setAlertStatus] = useState<'info' | 'warning' | 'error' | 'success'>('info');
 
+  // #todo: add check for existing user
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setWaitingFormDone(true);
@@ -35,7 +36,7 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
       return;
     }
 
-    if (email.toString().trim().length === 0 || password.toString().trim().length === 0) {
+    if (email.toString().trim().length == 0 || password.toString().trim().length == 0) {
       setAlertMessage('Email and password should not be empty');
       setAlertStatus('warning');
       setTimeout(() => {
@@ -50,7 +51,13 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
         email: email.toString().trim(),
         password: password.toString().trim(),
       };
+
       const tokens = await getLogin(data);
+
+      await getLogin(data).then((res) => {
+        console.log(data, res);
+      });
+
       if (tokens) {
         localStorage.setItem('access', tokens.access);
         localStorage.setItem('refresh', tokens.refresh);
@@ -65,7 +72,8 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
         }, 3000);
       }
     } catch (e) {
-      setAlertMessage(JSON.stringify(e));
+      console.log(JSON.stringify(e));
+      // setAlertMessage(e.toString());
       setAlertStatus('error');
       setTimeout(() => {
         setAlertMessage('');
