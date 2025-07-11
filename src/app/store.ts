@@ -5,6 +5,8 @@ type Store = {
   toggleJoinFormOpen: (value: boolean) => void;
   menuStatus: 'open' | 'close';
   changeMenuStatus: (status: 'open' | 'close') => void;
+  waitingFormDone: boolean;
+  setWaitingFormDone: (value: boolean) => void;
 };
 
 export const useStore = create<Store>((set) => ({
@@ -12,4 +14,6 @@ export const useStore = create<Store>((set) => ({
   toggleJoinFormOpen: (value) => set({ isJoinFormOpen: value }),
   menuStatus: 'close',
   changeMenuStatus: (status) => set({ menuStatus: status }),
+  waitingFormDone: false,
+  setWaitingFormDone: (value) => set({ waitingFormDone: value }),
 }));

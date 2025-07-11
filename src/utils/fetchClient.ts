@@ -1,4 +1,4 @@
-const BASE_URL = 'http://18.197.239.62:8000/api/';
+const BASE_URL = 'https://gloryphonic-api.ddns.net/api/';
 
 // To have autocompletion and avoid mistypes
 type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';

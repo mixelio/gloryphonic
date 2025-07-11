@@ -3,6 +3,14 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 import styles from './FirstScreenSection.module.scss';
 
 export const FirstScreenSection = () => {
+  const handleScrollToJoinSection = () => {
+    const joinSectionElement = document.querySelector('#joinSection-homepage');
+
+    if (joinSectionElement) {
+      joinSectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className={styles.firstScreenSection}>
       <div className={styles.info}>
@@ -12,7 +20,12 @@ export const FirstScreenSection = () => {
           музичні проекти. Підтримайте їх фінансово або приєднуйтесь, щоб разом прославляти Бога
           через музику.
         </p>
-        <Button variant={'text'} sx={{ border: 'none' }} endIcon={<KeyboardDoubleArrowDownIcon />}>
+        <Button
+          variant={'text'}
+          sx={{ border: 'none' }}
+          endIcon={<KeyboardDoubleArrowDownIcon />}
+          onClick={handleScrollToJoinSection}
+        >
           Дивись тут
         </Button>
       </div>

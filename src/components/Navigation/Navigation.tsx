@@ -36,15 +36,6 @@ export const Navigation = () => {
           {!isDesktop && <UserArea />}
         </div>
       </div>
-
-      {/* <IconButton 
-        aria-label="close navigation" 
-        className={styles.closeBtn} 
-        sx={{ position: 'absolute' }}
-        onClick={menuToggle}
-      >
-        <ArrowBackIcon sx={{ color: primaryColors.main }} />
-      </IconButton> */}
     </nav>
   );
 };

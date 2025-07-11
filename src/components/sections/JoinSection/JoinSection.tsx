@@ -7,7 +7,7 @@ export const JoinSection = () => {
   const toggleJoinFormOpen = useStore((state) => state.toggleJoinFormOpen);
 
   return (
-    <section className={styles.joinSection}>
+    <section className={styles.joinSection} id={'joinSection-homepage'}>
       <div className="container">
         <h2 className={styles.sectionTitle}>Як стати учасником платформи Gloryphonic</h2>
         <p className={styles.introductionText}>
