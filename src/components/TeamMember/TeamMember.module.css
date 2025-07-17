@@ -1,0 +1,57 @@
+.TeamMember {
+  position: relative;
+  width: 200px;
+  aspect-ratio: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  border: 1px solid #FBB348;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .TeamMember {
+    width: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  .TeamMember {
+    width: 300px;
+  }
+}
+.TeamMember img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.TeamMember h3 {
+  margin-block-end: 18px;
+  line-height: 1.3;
+}
+.TeamMember p {
+  color: #FBB348;
+  line-height: 1.3;
+}
+.TeamMember:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0A0A0A 15%, transparent 50%);
+  z-index: 2;
+}
+
+.TeamMemberInfo {
+  position: absolute;
+  bottom: 24px;
+  z-index: 3;
+  width: 100%;
+  padding-inline: 24px;
+}
+
+/*# sourceMappingURL=TeamMember.module.css.map */

@@ -36,7 +36,7 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
       return;
     }
 
-    if (email.toString().trim().length == 0 || password.toString().trim().length == 0) {
+    if (email.toString().trim().length == 0 || password.toString().trim().length === 0) {
       setAlertMessage('Email and password should not be empty');
       setAlertStatus('warning');
       setTimeout(() => {
@@ -89,6 +89,7 @@ export const LoginForm = ({ className = '' }: { className: string }) => {
       </Typography>
       <Box component={'form'} className={className} mb={3} onSubmit={handleSubmit}>
         <TextField
+          disabled={waitingFormDone}
           variant={'outlined'}
           label={'Enter your email'}
           name={'email'}

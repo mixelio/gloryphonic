@@ -1,0 +1,16 @@
+.teamStripe {
+  overflow-y: hidden;
+}
+.teamStripe h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-block-end: 24px;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .teamStripe h2 {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=TeamStripe.module.css.map */

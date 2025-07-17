@@ -1,0 +1,16 @@
+@import '../../../assets/styles/utils/mixins';
+
+.teamStripe {
+  overflow-y: hidden;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-block-end: 24px;
+    text-align: center;
+
+    @include on-tablet {
+      text-align: left;
+    }
+  }
+}
