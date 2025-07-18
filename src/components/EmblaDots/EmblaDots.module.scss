@@ -1,0 +1,29 @@
+@use '../../../src/assets/styles/utils/vars' as *;
+@use '../../../src/assets/styles/utils/mixins' as *;
+
+.embla__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  translate: 0 -20px;
+
+  @include on-tablet {
+    justify-content: flex-end;
+    translate: 0 0;
+  }
+}
+
+.embla__dot {
+  width: 16px;
+  height: 10px;
+  background-color: #aaaaaa;
+  opacity: 0.5;
+  transition-duration: 300ms;
+}
+
+.active__dot {
+  border-radius: 10%;
+  background-color: $primaryColor;
+  opacity: 1;
+}

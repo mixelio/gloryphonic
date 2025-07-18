@@ -2,7 +2,10 @@
 @use '../../../src/assets/styles/utils/mixins' as *;
 
 .embla__viewport {
+  position: relative;
   overflow: hidden;
+  min-height: 50vh;
+  max-height: 60vh;
 }
 
 .embla__container {
@@ -80,5 +83,16 @@
     @include on-tablet {
       text-align: left;
     }
+  }
+}
+
+.sliderNavigation {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 15%;
+
+  @include on-tablet {
+    width: fit-content;
   }
 }

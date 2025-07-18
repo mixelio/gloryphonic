@@ -3,12 +3,14 @@ import styles from './AboutUsSlider.module.scss';
 import Autoplay from 'embla-carousel-autoplay';
 import { useCallback, useEffect, useState } from 'react';
 import { aboutUsSlides } from '../../data/AboutUsInfo.ts';
+import { EmblaDots } from '../EmblaDots/EmblaDots.tsx';
 
 export const AboutUsSlider = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: 1 }, [
-    Autoplay({ playOnInit: true, delay: 9000, stopOnMouseEnter: false }),
+    Autoplay({ playOnInit: true, delay: 7000, stopOnMouseEnter: false }),
   ]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const onSelect = useCallback((emblaApi: any) => {
@@ -43,19 +45,14 @@ export const AboutUsSlider = () => {
               </div>
             ))}
         </div>
-      </div>
-      <div className={styles.embla__dots}>
-        {scrollSnaps.length > 0 &&
-          scrollSnaps.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.embla__dot} ${selectedIndex === index ? styles.active__dot : ''}`}
-              onClick={() => {
-                setSelectedIndex(index);
-                emblaApi?.scrollTo(index);
-              }}
-            ></button>
-          ))}
+        <div className={styles.sliderNavigation}>
+          <EmblaDots
+            scrollSnaps={scrollSnaps}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+            emblaApi={emblaApi}
+          />
+        </div>
       </div>
     </>
   );

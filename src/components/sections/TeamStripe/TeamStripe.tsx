@@ -8,6 +8,7 @@ export const TeamStripe = () => {
     <section className={styles.teamStripe}>
       <h2>Наша команда</h2>
       <Marquee
+        pauseOnHover={true}
         gradient={true}
         gradientColor={'#0A0A0A'}
         style={{ overflowY: 'hidden', height: 'auto', maxWidth: '90vw' }}

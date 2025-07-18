@@ -1,0 +1,29 @@
+.embla__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  translate: 0 -20px;
+}
+@media (min-width: 640px) {
+  .embla__dots {
+    justify-content: flex-end;
+    translate: 0 0;
+  }
+}
+
+.embla__dot {
+  width: 16px;
+  height: 10px;
+  background-color: #aaaaaa;
+  opacity: 0.5;
+  transition-duration: 300ms;
+}
+
+.active__dot {
+  border-radius: 10%;
+  background-color: #FBB348;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=EmblaDots.module.css.map */
