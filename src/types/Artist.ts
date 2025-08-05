@@ -5,6 +5,7 @@ export type Artist = {
   genre: string;
   description: string;
   image: string;
+  role: 'user' | 'admin';
   albums: {
     id: number;
     title: string;
@@ -23,4 +24,5 @@ export type Artist = {
     name: string;
     email: string;
   }[];
+  is_staff: boolean;
 };

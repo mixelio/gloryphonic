@@ -21,3 +21,7 @@ export const getLogin = async (data: { email: string; password: string }) => {
 export const getProfileInfo = async (token: string) => {
   return await client.get<Artist>('users/me/', token);
 };
+
+export const getArtists = async (token: string) => {
+  return await client.get<Artist[]>('users/artists/', token);
+};

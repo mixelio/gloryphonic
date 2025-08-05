@@ -1,12 +1,13 @@
-import { LinearProgress } from '@mui/material';
+import { CircularProgress, Divider, LinearProgress } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getProfileInfo } from '../../api/users.ts';
+import { useNavigate, Link } from 'react-router-dom';
+import { getProfileInfo, getArtists } from '../../api/users.ts';
 import type { Artist } from '../../types/Artist.ts';
 
 export const Me = () => {
   const myId = localStorage.getItem('authorizedUser') ?? null;
   const [profileInfo, setProfileInfo] = useState<Artist | null>(null);
+  const [artists, setArtists] = useState<Artist[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,8 +20,10 @@ export const Me = () => {
 
       try {
         const tempInfo = await getProfileInfo(accessToken);
+        const tempArtists = await getArtists(accessToken);
         if (tempInfo) {
           setProfileInfo(tempInfo);
+          setArtists(tempArtists);
         }
       } catch (e) {
         console.error(e);
@@ -34,9 +37,17 @@ export const Me = () => {
     <LinearProgress color="success" />
   ) : (
     <div className="mePage">
-      <h1 className="pageTitle">It is my page</h1>
-      <p>my id is {myId}</p>
-      <p>and my email is {profileInfo?.email}</p>
+      <h1 className="pageTitle">{profileInfo?.is_staff ? 'Admin' : profileInfo?.name}</h1>
+
+      <Divider sx={{ mb: 3, mt: 3 }} />
+
+      {artists.length > 0 ? (
+        artists.map((artist) =>
+          !artist.is_staff ? <Link to={`/artists/${artist.id}/edit`}>{artist.id}</Link> : null
+        )
+      ) : (
+        <CircularProgress />
+      )}
     </div>
   );
 };
