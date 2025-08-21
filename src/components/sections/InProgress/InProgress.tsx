@@ -1,10 +1,12 @@
+import waiting from '@images/icons/undraw_compose-music_9403.svg';
+
 export const InProgress = () => {
   return (
     <section className="inProgress mb-[56px]">
       <div className="container">
         <div className="w-full max-h-[70vh] flex flex-col items-center gap-8">
           <img
-            src="../src/assets/images/icons/undraw_compose-music_9403.svg"
+            src={waiting}
             alt="not found"
             className="block w-[100%] h-[40vh] object-contain mx-auto"
           />
