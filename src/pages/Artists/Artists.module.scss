@@ -1,0 +1,17 @@
+@use '@stylesUtils/mixins' as *;
+
+.artistsPage {
+  .artistsList {}
+  .artistsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem;
+
+    @include on-tablet {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    @include on-desktop {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+  }
+}

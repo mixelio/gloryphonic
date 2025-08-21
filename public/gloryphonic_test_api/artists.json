@@ -2,9 +2,27 @@
   {
     "id": 1,
     "name": "CryNeba",
-    "genre": "Soft Rock",
+    "email": "cryneba@gmail.com",
+    "avatar": "/images/cry_neba.jpg",
+    "country": "Ukraine",
+    "genre": ["Soft Rock"],
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/cry_neba.jpg",
+    "slogan": "Music that resonates with the soul and with God.",
+    "social_links": {
+      "facebook": "https://www.facebook.com/cryneba",
+      "instagram": "https://www.instagram.com/cryneba",
+      "twitter": "https://www.twitter.com/cryneba",
+      "youtube": "https://www.youtube.com/cryneba"
+    },
+    "members": [
+      {
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "pseudonym": "Край",
+        "role": "Frontman",
+        "photo": "/images/cry_neba.jpg"
+      }
+    ],
     "albums": [
       {
         "id": 1,
@@ -17,15 +35,47 @@
         "title": "Whispers in the Wind",
         "release_date": "2022-06-20",
         "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "name": "Михайло",
+        "email": "mixelios@gmail.com"
+      }
+    ],
+    "images": [
+      {
+        "id":1,
+        "user": 1,
+        "image": "/images/cry_neba.jpg"
       }
     ]
   },
   {
     "id": 2,
     "name": "Генадій Гвоздь",
-    "genre": "Rock",
+    "email": "genagvozd@gmail.com",
+    "avatar": "/images/Genady_Hvosd.jpg",
+    "country": "Ukraine",
+    "genre": ["Rock", "Alternative"],
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/Genady_Hvosd.jpg",
+    "slogan": "Rocking the world with every beat.",
+    "social_links": {
+      "facebook": "https://www.facebook.com/cryneba",
+      "instagram": "https://www.instagram.com/cryneba",
+      "twitter": "https://www.twitter.com/cryneba",
+      "youtube": "https://www.youtube.com/cryneba"
+    },
+    "members": [
+      {
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "pseudonym": "Край",
+        "role": "Frontman",
+        "photo": "/images/cry_neba.jpg"
+      }
+    ],
     "albums": [
       {
         "id": 1,
@@ -38,15 +88,47 @@
         "title": "Whispers in the Wind",
         "release_date": "2022-06-20",
         "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "name": "Михайло",
+        "email": "mixelios@gmail.com"
+      }
+    ],
+    "images": [
+      {
+        "id":1,
+        "user": 1,
+        "image": "/images/cry_neba.jpg"
       }
     ]
   },
   {
     "id": 3,
     "name": "Дарія Рева",
-    "genre": "Pop",
+    "email": "reva@outlook.com",
+    "avatar": "/images/daria_reva.jpg",
+    "country": "Ukraine",
+    "genre": ["Pop", "Electronic"],
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/daria_reva.jpg",
+    "slogan": "Only God can change all things.",
+    "social_links": {
+      "facebook": "https://www.facebook.com/cryneba",
+      "instagram": "https://www.instagram.com/cryneba",
+      "twitter": "https://www.twitter.com/cryneba",
+      "youtube": "https://www.youtube.com/cryneba"
+    },
+    "members": [
+      {
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "pseudonym": "Край",
+        "role": "Frontman",
+        "photo": "/images/cry_neba.jpg"
+      }
+    ],
     "albums": [
       {
         "id": 1,
@@ -60,14 +142,46 @@
         "release_date": "2022-06-20",
         "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
       }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "name": "Михайло",
+        "email": "mixelios@gmail.com"
+      }
+    ],
+    "images": [
+      {
+        "id":1,
+        "user": 1,
+        "image": "/images/cry_neba.jpg"
+      }
     ]
   },
   {
     "id": 4,
     "name": "Сергій Львов",
-    "genre": "Soft Rock",
+    "email": "lvov@i.ua",
+    "avatar": "/images/sergii_lvov.webp",
+    "country": "Ukraine",
+    "genre": ["Soft Rock"],
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/sergii_lvov.webp",
+    "slogan": "Music that resonates with the soul and with God.",
+    "social_links": {
+      "facebook": "https://www.facebook.com/cryneba",
+      "instagram": "https://www.instagram.com/cryneba",
+      "twitter": "https://www.twitter.com/cryneba",
+      "youtube": "https://www.youtube.com/cryneba"
+    },
+    "members": [
+      {
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "pseudonym": "Край",
+        "role": "Frontman",
+        "photo": "/images/cry_neba.jpg"
+      }
+    ],
     "albums": [
       {
         "id": 1,
@@ -80,6 +194,20 @@
         "title": "Whispers in the Wind",
         "release_date": "2022-06-20",
         "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "name": "Михайло",
+        "email": "mixelios@gmail.com"
+      }
+    ],
+    "images": [
+      {
+        "id":1,
+        "user": 1,
+        "image": "/images/cry_neba.jpg"
       }
     ]
   },
@@ -88,7 +216,22 @@
     "name": "Unknown Artist",
     "genre": "Soft Rock",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "/images/unknown.webp",
+    "avatar": "/images/unknown.webp",
+    "social_links": {
+      "facebook": "https://www.facebook.com/cryneba",
+      "instagram": "https://www.instagram.com/cryneba",
+      "twitter": "https://www.twitter.com/cryneba",
+      "youtube": "https://www.youtube.com/cryneba"
+    },
+    "members": [
+        {
+            "first_name": "Ivan",
+            "last_name": "Ivanov",
+            "pseudonym": "Край",
+            "role": "Frontman",
+            "photo": "/images/cry_neba.jpg"
+        }
+    ],
     "albums": [
       {
         "id": 1,
@@ -101,6 +244,20 @@
         "title": "Whispers in the Wind",
         "release_date": "2022-06-20",
         "cover_image": "https://example.com/images/whispers_in_the_wind.jpg"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "name": "Михайло",
+        "email": "mixelios@gmail.com"
+      }
+    ],
+    "images": [
+      {
+        "id":1,
+        "user": 1,
+        "image": "/images/cry_neba.jpg"
       }
     ]
   }

@@ -6,8 +6,8 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { AppLayout } from './AppLayout';
 import { Artists } from './pages/Artists/Artists';
 import { Sponsorship } from './pages/Sponsorship/Sponsorship';
-import { Contacts } from './pages/Contacts/Contacts';
-import { Profile } from './pages/Profile/Profile';
+import { ContactsPage } from './pages/ContactsPage/ContactsPage.tsx';
+import { Profile } from './pages/ProfilePage/Profile';
 import { Me } from './pages/Me/Me';
 import { Registration } from './pages/Registration/Registration.tsx';
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         children: [{ path: ':id?', element: <Profile /> }],
       },
       { path: '/sponsorship', element: <Sponsorship /> },
-      { path: '/contacts', element: <Contacts /> },
+      { path: '/contacts', element: <ContactsPage /> },
       { path: '/me', element: <Me /> },
       { path: '/registration', element: <Registration /> },
       { path: '*', element: <NotFoundPage /> },

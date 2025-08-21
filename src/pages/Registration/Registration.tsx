@@ -14,7 +14,6 @@ export const Registration = () => {
   const token = searchParams.get('token');
 
   useEffect(() => {
-    console.log(passAction);
     if (token) {
       localStorage.setItem('passAction', passActions.CreatePassword);
     }
@@ -25,8 +24,12 @@ export const Registration = () => {
 
   return (
     <Box component={'section'} className={styles.registration}>
-      {passAction === passActions.CreatePassword && <FirstPassword className={styles.formFrame} />}
-      {passAction === passActions.Login && <LoginForm className={styles.formFrame} />}
+      <div className="container">
+        {passAction === passActions.CreatePassword && (
+          <FirstPassword className={styles.formFrame} />
+        )}
+        {passAction === passActions.Login && <LoginForm className={styles.formFrame} />}
+      </div>
     </Box>
   );
 };

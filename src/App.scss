@@ -1,6 +1,5 @@
 // * addition styles
-
-@use './assets/styles/utils/reset' as *;
+@use 'modern-css-reset' as *;
 @use './assets/styles/utils/fonts' as *;
 @use './assets/styles/utils/vars' as *;
 @use './assets/styles/utils/mixins' as *;
@@ -12,3 +11,5 @@
 @use './components/Navigation/Navigation.module.scss' as *;
 
 // * pages
+
+@use "tailwindcss" as *;

@@ -1,4 +1,4 @@
-import { client } from '../utils/fetchClient.ts';
+import { client } from '../utils/axiosClient.ts';
 import type { RegData } from '../types/RegData.ts';
 import type { Artist } from '../types/Artist.ts';
 

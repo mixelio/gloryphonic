@@ -1,60 +1,17 @@
-.firstScreenSection {
-  position: relative;
-  background-image: linear-gradient(to bottom, transparent 0%, #0A0A0A 100%), url("../../../assets/images/content/first-image.jpg");
-  background-size: cover;
-  background-position: 20% 30%;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-@media (min-width: 640px) {
-  .firstScreenSection {
-    background-image: linear-gradient(to right, transparent 20%, #0A0A0A 70%), linear-gradient(to left, transparent 80%, #0A0A0A 90%), linear-gradient(to bottom, transparent 20%, #0A0A0A 100%), url("../../../assets/images/content/first-image.jpg");
-    min-height: 80vh;
-  }
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@stylesUtils/vars' as *;
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   FirstScreenSection.module.scss 1:1  root stylesheet */
 
-.info {
-  position: absolute;
-  width: 100%;
-  background-image: radial-gradient(at 30% 50%, #FBB348 -100%, transparent 35%);
-  height: fit-content;
-  bottom: 20px;
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@stylesUtils/vars' as *;\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   FirstScreenSection.module.scss 1:1  root stylesheet";
 }
-@media (min-width: 640px) {
-  .info {
-    text-align: left;
-    left: auto;
-    right: 20px;
-    width: 50%;
-    top: 50%;
-    translate: 0 -50%;
-    background-image: none;
-  }
-}
-@media (min-width: 1200px) {
-  .info {
-    width: 40%;
-    background-image: radial-gradient(500px 200px at 40% 30%, #FBB348 -140%, transparent 35%);
-  }
-}
-.info h1 {
-  font-size: clamp(2rem, 8vw, 3rem);
-  font-weight: 700;
-  margin-block-end: 28px;
-}
-.info p {
-  width: 90%;
-  margin-inline: auto;
-  font-size: 1.2rem;
-  margin-block-end: 36px;
-  line-height: 1.2;
-}
-.info button {
-  line-height: 1;
-}
-.info button:hover {
-  background-color: transparent;
-}
-
-/*# sourceMappingURL=FirstScreenSection.module.css.map */
