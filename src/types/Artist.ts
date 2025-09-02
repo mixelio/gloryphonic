@@ -3,8 +3,9 @@ export type Artist = {
   name: string;
   email: string;
   avatar: string;
+  cover_image: string;
   country: string;
-  genre: string;
+  genre: string[];
   description: string;
   slogan: string;
   role: 'artist' | 'admin' | 'manager';
