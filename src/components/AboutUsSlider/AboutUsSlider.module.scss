@@ -44,24 +44,26 @@
     z-index: 2;
 
     @include on-tablet {
-      background: linear-gradient(to right, $darkBackground 35%, transparent 80%);
+      background: linear-gradient(to right, $darkBackground 0, transparent 80%);
       opacity: 1;
     }
   }
 }
 
 .info_container {
-  padding: 20px;
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  padding: 30px 50px;
   position: absolute;
   top: 50%;
-  left: 0;
-  translate: 0 -50%;
+  left: 50%;
+  translate: -50% -50%;
   z-index: 3;
+  max-width: 900px;
   width: 100%;
 
   @include on-tablet {
-    padding: 0;
-    width: 50%;
+    width: 70%;
   }
 
   h3 {
@@ -83,16 +85,5 @@
     @include on-tablet {
       text-align: left;
     }
-  }
-}
-
-.sliderNavigation {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 15%;
-
-  @include on-tablet {
-    width: fit-content;
   }
 }

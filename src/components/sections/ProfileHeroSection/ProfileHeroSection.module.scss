@@ -1,7 +1,9 @@
 @use '@stylesUtils/vars' as *;
+@use '@stylesUtils/mixins' as *;
 
 .profileHeroSection {
-  min-height: 90dvh;
+  max-height: 800px;
+  height: 90dvh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -19,29 +21,42 @@
   }
 
   &__content {
+    position: absolute;
+    bottom: 10%;
 
+    z-index: 2;
+
+    @include on-tablet {
+      left: 50%;
+      translate: -50% 0;
+    }
   }
 
   &__title {
     width: fit-content;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    margin-bottom: 32px;
     font-size: 4rem;
     font-weight: bold;
-    z-index: 2;
+    line-height: 120%;
+
+    @include on-tablet {
+      margin-inline: auto;
+      white-space: nowrap;
+    }
   }
 
   &__infoBox {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 1rem;
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    translate: -50% 0;
     z-index: 2;
+
+    @include on-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      bottom: 4rem;
+    }
 
     li {
       display: flex;
