@@ -2,16 +2,13 @@ export type Artist = {
   id: number;
   name: string;
   email: string;
-  genre: string;
+  avatar: string;
+  cover_image: string;
+  country: string;
+  genre: string[];
   description: string;
-  image: string;
-  role: 'user' | 'admin';
-  albums: {
-    id: number;
-    title: string;
-    release_date: string;
-    cover_image: string;
-  }[];
+  slogan: string;
+  role: 'artist' | 'admin' | 'manager';
   socials: {
     facebook?: string;
     instagram?: string;
@@ -19,10 +16,29 @@ export type Artist = {
     spotify?: string;
     youtube_music?: string;
   };
+  members: {
+    first_name: string;
+    last_name: string;
+    pseudonym: string;
+    role: string;
+    photo: string;
+  }[];
+  albums: {
+    id: number;
+    title: string;
+    release_date: string;
+    cover_image: string;
+  }[];
+
   followers: {
     id: number;
     name: string;
     email: string;
+  }[];
+  images: {
+    id: number;
+    user: number;
+    image: string;
   }[];
   is_staff: boolean;
 };

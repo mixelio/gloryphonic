@@ -1,19 +1,28 @@
-import {Link, Outlet, useLocation} from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom';
+import { useFetchArtists } from '../../hooks/useFetchArtists.tsx';
+import { ArtistCard } from '../../components/ArtistCard/ArtistCard.tsx';
+import styles from './Artists.module.scss';
 
 export const Artists = () => {
-  const location = useLocation()
-  const isArtistPage = location.pathname.startsWith('/artists/')
+  const { artists } = useFetchArtists();
+  const location = useLocation();
+  const isArtistPage = location.pathname.startsWith('/artists/');
 
   return (
-    <div className='artistsPage'>
-      {isArtistPage ? 
-        <Outlet /> : 
-        <>
-          <h1 className='pageTitle'>Artists Page</h1>
-
-          <Link to={'2'} >Artists 2</Link>
-        </>
-      }
+    <div className={styles.artistsPage}>
+      {isArtistPage ? (
+        <Outlet />
+      ) : (
+        <section className={styles.artistsList}>
+          <div className="container">
+            <div className={styles.artistsGrid}>
+              {artists.map((artist) => (
+                <ArtistCard artist={artist} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
-}
+};

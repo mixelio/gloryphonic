@@ -1,7 +1,9 @@
+import { InProgress } from '../../components/sections/InProgress/InProgress.tsx';
+
 export const Sponsorship = () => {
   return (
-    <div className='sponsorshipPage'>
-      <h1 className='pageTitle'>Sponsorships page</h1>
+    <div className="sponsorshipPage">
+      <InProgress />
     </div>
-  )
-}
+  );
+};

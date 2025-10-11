@@ -1,0 +1,94 @@
+@use '@stylesUtils/vars.scss' as *;
+@use '@stylesUtils/mixins.scss' as *;
+
+.selfDescription {
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    color: $primaryColor;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 750px;
+    max-height: 4.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-block-end: 1rem;
+    transition-duration: 600ms;
+
+    @include on-tablet {
+      width: 60%;
+    }
+
+    @include on-desktop {
+      max-height: none;
+    }
+
+    &.expanded {
+      max-height: 50rem;
+
+      @include on-desktop {
+        max-height: none;
+      }
+    }
+  }
+
+  &__imageContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+    aspect-ratio: 1/1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+              linear-gradient(to right, rgba(0, 0, 0, 0.3) 70%, $darkBackground 100%),
+              linear-gradient(to left, rgba(0, 0, 0, 0.3) 70%, $darkBackground 100%);
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include on-tablet {
+      display: block;
+    }
+  }
+
+  &__button {
+    display: block;
+
+    @include on-desktop {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
+  }
+}
+

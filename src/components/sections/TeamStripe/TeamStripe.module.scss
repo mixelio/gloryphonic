@@ -1,4 +1,4 @@
-@import '../../../assets/styles/utils/mixins';
+@use '../../../assets/styles/utils/mixins' as *;
 
 .teamStripe {
   overflow-y: hidden;
