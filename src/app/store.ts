@@ -1,5 +1,9 @@
 import { create } from 'zustand';
 
+// type Comment = {
+//   name: string; comment: string
+// }
+
 type Store = {
   isJoinFormOpen: boolean;
   toggleJoinFormOpen: (value: boolean) => void;
@@ -7,6 +11,11 @@ type Store = {
   changeMenuStatus: (status: 'open' | 'close') => void;
   waitingFormDone: boolean;
   setWaitingFormDone: (value: boolean) => void;
+  // comments: {
+  //   artistId: string;
+  //   comments: Comment[]
+  // }[];
+  // addComment: (comment: Comment) => void;
 };
 
 export const useStore = create<Store>((set) => ({
