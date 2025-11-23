@@ -17,11 +17,12 @@
   &__subtitle {
     font-size: 1.5rem;
     color: $primaryColor;
+    max-width: 750px;
   }
 
   &__text {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.4;
     width: 100%;
     max-width: 750px;
     max-height: 4.8rem;

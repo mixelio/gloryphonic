@@ -1,12 +1,14 @@
 import type { Artist } from '../../../types/Artist.ts';
 import styles from './ProfileHeroSection.module.scss';
 
-export const ProfileHeroSection = ({ artist }: { artist: Artist }) => {
+
+export const ProfileHeroSection = ({artist}: { artist: Artist }) => {
+
   return (
     <section
       className={styles.profileHeroSection}
       style={{
-        backgroundImage: `url(${artist.cover_image}`,
+        backgroundImage: `url(${artist.images[0]?.image ?? ''}`,
       }}
     >
       <div className="container">
@@ -24,8 +26,8 @@ export const ProfileHeroSection = ({ artist }: { artist: Artist }) => {
             <li>
               <span>Жанри</span>
               <span>
-                {artist.genre.map((item) => (
-                  <span>{item}</span>
+                {artist.genres.map((item, index) => (
+                  <span key={index}>{item.name}</span>
                 ))}
               </span>
             </li>{' '}

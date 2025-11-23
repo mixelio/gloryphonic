@@ -42,14 +42,19 @@
     margin-block-end: 28px;
   }
   p {
-    width: 90%;
+    //width: 90%;
     margin-inline: auto;
     font-size: 1.2rem;
     margin-block-end: 36px;
     line-height: 1.2;
   }
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $primaryColor;
+    font-size: 1.5rem;
     line-height: 1;
     &:hover {
       background-color: transparent;

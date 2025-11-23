@@ -1,24 +1,16 @@
-import { Button } from '@mui/material';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import styles from './FirstScreenSection.module.scss';
+import FastForwardIcon from '@mui/icons-material/FastForward';
 import useEmblaCarousel from "embla-carousel-react";
 import { homeFirstScreen } from "../../../data/homeFirstScreen.ts";
 import Autoplay from 'embla-carousel-autoplay';
 import Fade from 'embla-carousel-fade';
+import {Link} from "react-router-dom";
 
 export const FirstScreenSection = () => {
-  const handleScrollToJoinSection = () => {
-    const joinSectionElement = document.querySelector('#joinSection-homepage');
-
-    if (joinSectionElement) {
-      joinSectionElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const [emblaRef] = useEmblaCarousel({ loop: true}, [
+    const [emblaRef] = useEmblaCarousel({ loop: true}, [
       Autoplay({ playOnInit: true, delay: 7000, stopOnMouseEnter: false }),
       Fade(),
-  ])
+    ])
 
   return (
     <section className={styles.firstScreenSection}>
@@ -39,14 +31,12 @@ export const FirstScreenSection = () => {
           музичні проекти. Підтримайте їх фінансово або приєднуйтесь, щоб разом прославляти Бога
           через музику.
         </p>
-        <Button
-          variant={'text'}
-          sx={{ border: 'none' }}
-          endIcon={<KeyboardDoubleArrowDownIcon />}
-          onClick={handleScrollToJoinSection}
+        <Link
+          to={'/artists'}
         >
-          Дивись тут
-        </Button>
+            Дивись учасників
+            <FastForwardIcon />
+        </Link>
       </div>
     </section>
   );
