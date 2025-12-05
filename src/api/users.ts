@@ -27,11 +27,15 @@ export const getArtists = async () => {
   return await client.get<Artist[]>('bands');
 };
 
+export const getArtist = async (id: string) => {
+  return await client.get<Artist>(`bands${id}`);
+}
+
 export const postComment = async ({userId, user, text}:{userId: string, user: string, text: string}) => {
-  console.log(userId, user, text);
-  return await client.post(`users/${userId}/comments/`, {text, user});
+
+  return await client.post<Comment>(`bands/${userId}/comments/`, {text, user});
 };
 
 export const getComments = async ({userId}: {userId: string}) => {
-  return await client.get<Comment[]>(`users/${userId}/comments/`);
+  return await client.get<Comment[]>(`bands/${userId}/comments/`);
 }

@@ -68,6 +68,7 @@
 }
 
 .embla__container {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100%;
@@ -75,8 +76,9 @@
 
 
   img {
+    position: absolute;
     min-height: 100%;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
   }
 }

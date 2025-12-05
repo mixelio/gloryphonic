@@ -1,0 +1,41 @@
+@use '../../assets/styles/utils/vars' as *;
+
+.commentsContainer {
+  max-width: 750px;
+}
+
+.commentsLabel {
+  color: $primaryColor;
+}
+
+.commentBody {
+  padding-block-end: 10px;
+
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #1F1F1F;
+    margin-block-end: 10px;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.commentAuthor {
+  color: $primaryColor;
+}
+
+.commentText {
+  width: fit-content;
+  background-color: #1F1F1F;
+  padding: 10px 20px;
+  border-radius: 0 8px;
+}
+
+.commentDate {
+  font-size: 10px;
+  opacity: 60%;
+}

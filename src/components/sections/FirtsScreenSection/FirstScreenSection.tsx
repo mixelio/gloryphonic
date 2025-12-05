@@ -19,7 +19,7 @@ export const FirstScreenSection = () => {
                 {
                     homeFirstScreen.length > 0 &&
                     homeFirstScreen.map(item => (
-                        <img src={item.image} alt=""/>
+                        <img src={item.image} alt="" />
                     ))
                 }
             </div>
