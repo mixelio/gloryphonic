@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import type {Comment} from '../types/Comment.ts'
 
 type Store = {
   isJoinFormOpen: boolean;
@@ -7,6 +8,9 @@ type Store = {
   changeMenuStatus: (status: 'open' | 'close') => void;
   waitingFormDone: boolean;
   setWaitingFormDone: (value: boolean) => void;
+  comments: Comment[];
+  setInitialComments: (value: Comment[]) => void;
+  addComment: (value: Comment) => void;
 };
 
 export const useStore = create<Store>((set) => ({
@@ -16,4 +20,7 @@ export const useStore = create<Store>((set) => ({
   changeMenuStatus: (status) => set({ menuStatus: status }),
   waitingFormDone: false,
   setWaitingFormDone: (value) => set({ waitingFormDone: value }),
+  comments: [],
+  setInitialComments: (initialComments: Comment[]) => set({ comments: initialComments }),
+  addComment: (value) => set((state) => ({ comments: [value,...state.comments] })),
 }));
