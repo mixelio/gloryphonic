@@ -7,7 +7,6 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import styles from './ArtistsSection.module.scss';
 import { ArtistCard } from '../../ArtistCard/ArtistCard.tsx';
 import { theme } from '../../../theme.ts';
-// import Autoplay from 'embla-carousel-autoplay';
 import { useMediaQuery } from 'react-responsive';
 import { useFetchArtists } from '../../../hooks/useFetchArtists.tsx';
 
