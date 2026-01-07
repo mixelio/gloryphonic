@@ -7,7 +7,7 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import styles from './ArtistsSection.module.scss';
 import { ArtistCard } from '../../ArtistCard/ArtistCard.tsx';
 import { theme } from '../../../theme.ts';
-import Autoplay from 'embla-carousel-autoplay';
+// import Autoplay from 'embla-carousel-autoplay';
 import { useMediaQuery } from 'react-responsive';
 import { useFetchArtists } from '../../../hooks/useFetchArtists.tsx';
 
@@ -16,9 +16,7 @@ const primaryColor = theme.palette.primary.main;
 export const ArtistsSection = () => {
   const { artists } = useFetchArtists();
   const isTablet = useMediaQuery({ query: '(min-width: 640px' });
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: 1 }, [
-    Autoplay({ playOnInit: true, delay: 9000, stopOnMouseEnter: false }),
-  ]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, slidesToScroll: 1 });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
