@@ -1,5 +1,5 @@
 import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios';
-const BASE_URL = 'https://gloryphonic-api.ddns.net/api/';
+const BASE_URL = 'https://api.gloryphonic.net/api/';
 type RequestMethod = 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
 
 const axiosClient = axios.create({ baseURL: BASE_URL });
