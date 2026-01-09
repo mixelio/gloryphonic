@@ -20,8 +20,8 @@ export const Profile = () => {
           <Divider sx={{ mb: 4, mt: 4 }} />
           {artist.description && <SelfDescriptionSection artist={artist} />}
           <Divider sx={{ mb: 4, mt: 4 }} />
-          <VideosList artist={artist}/>
-          <Divider sx={{ mb: 4, mt: 4 }} />
+          {artist.videos.length > 0 && <VideosList artist={artist}/>}
+          {artist.videos.length > 0 && <Divider sx={{ mb: 4, mt: 4 }} />}
           <CommentsByProfile artist={artist} />
         </div>
       )}

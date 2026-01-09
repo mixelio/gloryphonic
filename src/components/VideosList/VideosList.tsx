@@ -34,8 +34,9 @@ export const VideosList = ({ artist }: { artist: Artist }) => {
 
     (async () => {
       try {
-        const vid = artist?.videos.length > 0 ? artist?.videos[0].playlist : 'PLY9ETa5VphqghSqCnNy7WgbLqR9AFLyP0';
-        const fetchedVideos = await getArtistVideos(vid);
+        const vid = artist?.videos.length > 0 ? artist?.videos[0].playlist : '';
+
+        const fetchedVideos = vid ? await getArtistVideos(vid) : [];
 
         setVideos(fetchedVideos);
       } catch (e) {
@@ -45,6 +46,8 @@ export const VideosList = ({ artist }: { artist: Artist }) => {
       }
     })();
   }, []);
+
+  console.log(videos.length);
 
   return (
     <section className={'videosList'}>
