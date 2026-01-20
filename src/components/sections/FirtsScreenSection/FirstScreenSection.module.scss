@@ -1,12 +1,32 @@
 @use '@stylesUtils/vars' as *;
 @use '@stylesUtils/mixins' as *;
 
+
 .firstScreenSection {
   position: relative;
   min-height: 100vh;
 
   @include on-tablet {
     min-height: 80vh;
+  }
+}
+
+.embla__viewport {
+  position: relative;
+  width: 100%;
+
+  @include on-tablet {
+    width: 60%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-image: linear-gradient(to left, $darkBackground 0%, transparent 30%), linear-gradient(to right, $darkBackground 0%, transparent 30%), linear-gradient(to top, $darkBackground 0%, transparent 100%);
+    width: 100%;
   }
 }
 
@@ -18,18 +38,15 @@
   text-align: center;
   padding: 1rem;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(7px);
+  background-image: radial-gradient(ellipse at center, var(--bg-primary-15) 0%, transparent 60%);
 
 
   @include on-tablet {
     text-align: left;
-    left: auto;
-    right: 20px;
-    width: 50%;
+    width: clamp(300px, 30vw, 700px);
+    right: 10%;
     top: 50%;
-    translate: -50% -50%;
-    background-image: none;
+    translate: 0 -50%;
   }
 
   //@include on-desktop {

@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.scss';
+import './App.css';
 import { MainPage } from './pages/MainPage/MainPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';

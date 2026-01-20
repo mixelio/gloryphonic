@@ -14,7 +14,7 @@ export const FirstScreenSection = () => {
 
   return (
     <section className={styles.firstScreenSection}>
-        <div className={styles.embla__viewport} ref={emblaRef}>
+      <div className={styles.embla__viewport} ref={emblaRef}>
             <div className={styles.embla__container}>
                 {
                     homeFirstScreen.length > 0 &&
@@ -25,11 +25,9 @@ export const FirstScreenSection = () => {
             </div>
         </div>
       <div className={styles.info}>
-        <h1>Заяви про себе</h1>
+        <h1>Gloryphonic</h1>
         <p>
-          Gloryphonic — це простір, де християнські виконавці та автори можуть реалізовувати свої
-          музичні проекти. Підтримайте їх фінансово або приєднуйтесь, щоб разом прославляти Бога
-          через музику.
+          Християнська музична платформа та продюсерський простір. Створення, розвиток і підтримка християнської музики та музикантів.
         </p>
         <Link
           to={'/artists'}
