@@ -1,9 +1,4 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use 'modern-css-reset' as *;
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   App.scss 2:1  root stylesheet */
+@import 'modern-css-reset';
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +8,11 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use 'modern-css-reset' as *;\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   App.scss 2:1  root stylesheet";
 }
+
+:root {
+    --primary: #FBB348;
+
+    --bg-primary-15: color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
