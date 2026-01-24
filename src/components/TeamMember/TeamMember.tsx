@@ -9,7 +9,7 @@ type Props = {
 export const TeamMember: React.FC<Props> = ({ member }) => {
   return (
     <div className={styles.TeamMember} style={{ marginInline: '20px' }}>
-      <img src={member.image} alt={member.name} />
+      <img src={member.image as string} alt={member.name} />
       <div className={styles.TeamMemberInfo}>
         <h3>{member.name}</h3>
         <p>{member.position}</p>
