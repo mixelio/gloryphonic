@@ -73,8 +73,10 @@
     color: $primaryColor;
     font-size: 1.5rem;
     line-height: 1;
+    transition-duration: 300ms;
     &:hover {
       background-color: transparent;
+      letter-spacing: 1.2px;
     }
   }
 }

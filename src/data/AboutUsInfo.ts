@@ -9,7 +9,7 @@ import slide3 from './../assets/images/content/slide3.jpg';
 
 export type AboutUsSliderItem = {
   id: number;
-  image: string;
+  image: string | {};
   title: string;
   description: string;
 };
@@ -18,23 +18,26 @@ export type TeamMemberType = {
   id: number;
   name: string;
   position: string;
-  image: string;
+  image: string | {};
 };
 
 export const aboutUsSlides: AboutUsSliderItem[] = [
   {
     id: 1,
     image: slide1,
-    title: 'Про нас',
+    title: 'Gloryphonic',
     description:
-      'Gloryphonic — це платформа, яка об’єднує музикантів, слухачів та професіоналів індустрії для створення якісної музики з метою служіння.',
+      'християнська музична платформа та продюсерський простір для музикантів, авторів та слухачів.\n' +
+      ' Ми створили Gloryphonic, щоб підтримати розвиток християнської музики і допомогти музикантам реалізувати творчі ідеї.',
   },
   {
     id: 2,
     image: slide2,
-    title: 'Наша місія',
+    title: 'Що ми робимо?',
     description:
-      'Ми прагнемо допомогти музикантам реалізувати свій потенціал, створюючи музику, яка надихає та змінює життя людей.',
+    `
+      Підтримуємо створення християнської музики - Допомагаємо музикантам і авторам знайти аудиторію - Надаємо простір для продюсування та розвитку - Створюємо спільноту, де слухачі можуть підтримувати артистів
+    `
   },
   {
     id: 3,

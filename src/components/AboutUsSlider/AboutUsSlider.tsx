@@ -16,7 +16,7 @@ export const AboutUsSlider = () => {
         {aboutUsSlides.length > 0 &&
           aboutUsSlides.map((slide) => (
             <div key={slide.id} className={styles.embla__slide}>
-              <img src={slide.image} alt={slide.title} />
+              <img src={slide.image as string} alt={slide.title} />
               <div className={`${styles.info_container}`}>
                 <h3>{slide.title}</h3>
                 <p>{slide.description}</p>
