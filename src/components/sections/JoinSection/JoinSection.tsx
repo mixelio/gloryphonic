@@ -28,7 +28,7 @@ export const JoinSection = () => {
             ))}
         </div>
         <Button
-          variant={'text'}
+          variant={'contained'}
           className={styles.joinButton}
           onClick={() => toggleJoinFormOpen(true)}
           size={'large'}
@@ -40,7 +40,7 @@ export const JoinSection = () => {
             marginInline: 'auto',
           }}
         >
-          СТАТИ УЧАСНИКОМ
+          <span>СТАТИ УЧАСНИКОМ</span>
         </Button>
       </div>
     </section>
