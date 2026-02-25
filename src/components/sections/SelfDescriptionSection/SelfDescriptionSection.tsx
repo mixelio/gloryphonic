@@ -19,7 +19,7 @@ export const SelfDescriptionSection = ({artist}: {artist: Artist }) => {
                     <p
                         className={`${styles.selfDescription__text} ${isDescriptionExpanded ? `${styles.expanded}` : ''}`}
                     >
-                        {artist?.description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci eaque explicabo ipsa iusto porro, ullam vero voluptatum. Ab alias aliquam at aut blanditiis consequuntur corporis ducimus excepturi, expedita minima natus nisi nostrum nulla numquam perspiciatis, qui reiciendis, rem repellat repudiandae velit? Asperiores at cupiditate laborum laudantium, mollitia nisi non numquam officiis provident quas quasi ullam, veritatis? Dicta dolorem ducimus eaque exercitationem ipsam labore magnam maiores molestias nisi placeat, porro qui quia quibusdam quisquam repellat rerum, tenetur vel veniam. Alias aliquid animi autem deserunt dolore, enim facilis maiores minus molestiae molestias, nemo quia ratione reiciendis sapiente sequi temporibus veritatis vitae!
+                        {artist?.description}
                     </p>
                     <Button
                         variant="text"

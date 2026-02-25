@@ -1,3 +1,39 @@
+.commentsContainer {
+  max-width: 750px;
+}
 
+.commentsLabel {
+  color: #FBB348;
+}
+
+.commentBody {
+  padding-block-end: 10px;
+}
+.commentBody:not(:last-child) {
+  border-bottom: 1px solid #1F1F1F;
+  margin-block-end: 10px;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.commentAuthor {
+  color: #FBB348;
+}
+
+.commentText {
+  width: fit-content;
+  background-color: #1F1F1F;
+  padding: 10px 20px;
+  border-radius: 0 8px;
+}
+
+.commentDate {
+  font-size: 10px;
+  opacity: 60%;
+}
 
 /*# sourceMappingURL=CommentsList.module.css.map */

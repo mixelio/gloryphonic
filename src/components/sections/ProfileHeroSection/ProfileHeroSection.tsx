@@ -6,7 +6,7 @@ export const ProfileHeroSection = ({ artist }: { artist: Artist }) => {
     <section
       className={styles.profileHeroSection}
       style={{
-        backgroundImage: `url(${artist?.images[0]?.image}`,
+        backgroundImage: `url(${artist.images[0]?.image ?? ''}`,
       }}
     >
       <div className="container">

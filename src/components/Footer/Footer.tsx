@@ -29,16 +29,17 @@ export const Footer = () => {
             </Link>
             <Link to="phone:+4916093143373">
               <CallIcon />
-              +49 160 93143373
+              +49 160 9314 33 73
             </Link>
             <Link to="phone:+380996579394">
               <CallIcon />
-              +380 99 6579394
+              +380 99 657 93 94
             </Link>
             <Link to="phone:+380689145004">
               <CallIcon />
-              +380 68 9145004
+              +380 68 914 50 04
             </Link>
+
           </div>
           <div className={styles.socialContainer}>
             <Link to="https://t.me/gloryphonic" target="_blank">

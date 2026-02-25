@@ -41,5 +41,4 @@ export type Artist = {
     user: number;
     image: string;
   }[];
-  is_staff: boolean;
 };

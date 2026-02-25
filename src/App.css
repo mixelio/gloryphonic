@@ -1,9 +1,17 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use 'modern-css-reset' as *;
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   App.scss 2:1  root stylesheet */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
