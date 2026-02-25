@@ -4,7 +4,7 @@ import styles from './Registration.module.scss';
 import { FirstPassword } from '../../components/sections/FirstPasswordSection/FirstPassword.tsx';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { passActions } from '../../types/passActions.ts';
-import { LoginForm } from '../../components/LoginForm/LoginForm.tsx';
+// import { LoginForm } from '../../components/LoginForm/LoginForm.tsx';
 
 export const Registration = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ export const Registration = () => {
         {passAction === passActions.CreatePassword && (
           <FirstPassword className={styles.formFrame} />
         )}
-        {passAction === passActions.Login && <LoginForm className={styles.formFrame} />}
+        {/*{passAction === passActions.Login && <LoginForm className={styles.formFrame} />}*/}
       </div>
     </Box>
   );

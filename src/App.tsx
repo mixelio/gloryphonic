@@ -9,7 +9,7 @@ import { Artists } from './pages/Artists/Artists';
 import { Sponsorship } from './pages/Sponsorship/Sponsorship';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage.tsx';
 import { Profile } from './pages/ProfilePage/Profile';
-import { Me } from './pages/Me/Me';
+// import { Me } from './pages/Me/Me';
 import { Registration } from './pages/Registration/Registration.tsx';
 
 const router = createBrowserRouter([
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       },
       { path: '/sponsorship', element: <Sponsorship /> },
       { path: '/contacts', element: <ContactsPage /> },
-      { path: '/me', element: <Me /> },
+      // { path: '/me', element: <Me /> },
       { path: '/registration', element: <Registration /> },
       { path: '*', element: <NotFoundPage /> },
     ],

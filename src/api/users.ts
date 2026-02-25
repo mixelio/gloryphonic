@@ -18,9 +18,9 @@ export const getLogin = async (data: { email: string; password: string }) => {
   return await client.post<{ access: string; refresh: string }>('token/', data);
 };
 
-export const getProfileInfo = async (id: number) => {
-  return await client.get<Artist>(`bands/${id}/`);
-};
+// export const getProfileInfo = async (id: number) => {
+//   return await client.get<Artist>(`bands/${id}/`);
+// };
 
 export const getArtists = async () => {
   return await client.get<Artist[]>('bands/');
