@@ -5,7 +5,6 @@ import {useState} from "react";
 
 export const SelfDescriptionSection = ({artist}: {artist: Artist }) => {
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
-    const background = artist.images.length > 1 ? artist.images[1].image : '';
 
     const toggleDescription = () => {
         setIsDescriptionExpanded(!isDescriptionExpanded);
@@ -16,7 +15,7 @@ export const SelfDescriptionSection = ({artist}: {artist: Artist }) => {
             <div className="container">
                 <div className={styles.selfDescription__content}>
                     <h2 className={styles.selfDescription__title}>{artist?.name}</h2>
-                    <h3 className={styles.selfDescription__subtitle}>{artist?.slogan}</h3>
+                    <h3>{artist?.slogan}</h3>
                     <p
                         className={`${styles.selfDescription__text} ${isDescriptionExpanded ? `${styles.expanded}` : ''}`}
                     >
@@ -30,7 +29,7 @@ export const SelfDescriptionSection = ({artist}: {artist: Artist }) => {
                         {!isDescriptionExpanded ? 'детальніше' : 'згорнути'}
                     </Button>
                     <div className={styles.selfDescription__imageContainer}>
-                        <img src={background} alt="" className={styles.selfDescription__image}/>
+                        <img src={artist?.images[0].image} alt="" className={styles.selfDescription__image}/>
                     </div>
                 </div>
             </div>

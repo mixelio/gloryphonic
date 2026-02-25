@@ -10,7 +10,7 @@ type Props = {
 
 export const ArtistCard: React.FC<Props> = ({ artist, className }) => {
   return (
-    <Link to={`/artists/${artist.id}`} className={`${styles.artistSlide} ${className}`}>
+    <Link to={`/artists/${artist?.slug}`} className={`${styles.artistSlide} ${className}`}>
       <img src={artist.cover_image} alt={artist.name} />
       <h3>{artist.name}</h3>
     </Link>

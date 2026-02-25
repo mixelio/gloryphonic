@@ -19,12 +19,12 @@ export const getLogin = async (data: { email: string; password: string }) => {
   return await client.post<{ access: string; refresh: string }>('token/', data);
 };
 
-export const getProfileInfo = async (token: string) => {
-  return await client.get<Artist>('users/me/', token);
-};
+// export const getProfileInfo = async (id: number) => {
+//   return await client.get<Artist>(`bands/${id}/`);
+// };
 
 export const getArtists = async () => {
-  return await client.get<Artist[]>('bands');
+  return await client.get<Artist[]>('bands/');
 };
 
 export const getArtist = async (id: string) => {

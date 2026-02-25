@@ -7,23 +7,23 @@ import Fade from 'embla-carousel-fade';
 import {Link} from "react-router-dom";
 
 export const FirstScreenSection = () => {
-    const [emblaRef] = useEmblaCarousel({ loop: true}, [
-      Autoplay({ playOnInit: true, delay: 7000, stopOnMouseEnter: false }),
-      Fade(),
-    ])
+  const [emblaRef] = useEmblaCarousel({ loop: true}, [
+    Autoplay({ playOnInit: true, delay: 7000, stopOnMouseEnter: false }),
+    Fade(),
+  ])
 
   return (
     <section className={styles.firstScreenSection}>
       <div className={styles.embla__viewport} ref={emblaRef}>
-            <div className={styles.embla__container}>
-                {
-                    homeFirstScreen.length > 0 &&
-                    homeFirstScreen.map(item => (
-                        <img src={item.image} alt="" />
-                    ))
-                }
-            </div>
+        <div className={styles.embla__container}>
+          {
+            homeFirstScreen.length > 0 &&
+            homeFirstScreen.map(item => (
+              <img src={item.image} alt="" />
+            ))
+          }
         </div>
+      </div>
       <div className={styles.info}>
         <h1>Gloryphonic</h1>
         <p>
@@ -33,7 +33,7 @@ export const FirstScreenSection = () => {
           to={'/about'}
         >
           Хто ми
-            <FastForwardIcon />
+          <FastForwardIcon />
         </Link>
       </div>
     </section>

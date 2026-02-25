@@ -21,38 +21,34 @@ export const Footer = () => {
           <div className={styles.contactsContainer}>
             <Link to="https://maps.app.goo.gl/yLn1CUJMtuei9dVY9" target="_blank">
               <BusinessIcon />
-              Junghansstr. 9,
-              70469 Stuttgart
-              Germany
+              Junghansstr. 9, 70469 Stuttgart Germany
             </Link>
             <Link to="mailto:gloryphonic@gmail.com">
               <MailOutlineIcon />
               gloryphonic@gmail.com
             </Link>
-
-
-
+            <Link to="phone:+4916093143373">
+              <CallIcon />
+              +49 160 9314 33 73
+            </Link>
             <Link to="phone:+380996579394">
               <CallIcon />
-              +380996579394
+              +380 99 657 93 94
             </Link>
             <Link to="phone:+380689145004">
               <CallIcon />
-              +380689145004
+              +380 68 914 50 04
             </Link>
-            <Link to="phone:+4916093143373">
-              <CallIcon />
-              +4916093143373
-            </Link>
+
           </div>
           <div className={styles.socialContainer}>
             <Link to="https://t.me/gloryphonic" target="_blank">
               <TelegramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
-            <Link to="https://www.instagram.com/gloryphonic/" target="_blank">
+            <Link to="https://instagram.com/gloryphonic" target="_blank">
               <InstagramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
-            <Link to="www.youtube.com/@gloryphonic" target="_blank">
+            <Link to="https://youtube.com/@gloryphonic" target="_blank">
               <YouTubeIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
           </div>
