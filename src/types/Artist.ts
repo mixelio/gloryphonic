@@ -1,5 +1,6 @@
 export type Artist = {
   id: number;
+  slug: string;
   name: string;
   email: string;
   avatar: string;

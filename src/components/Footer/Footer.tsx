@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CallIcon from '@mui/icons-material/Call';
 import BusinessIcon from '@mui/icons-material/Business';
@@ -21,26 +21,34 @@ export const Footer = () => {
           <div className={styles.contactsContainer}>
             <Link to="https://maps.app.goo.gl/yLn1CUJMtuei9dVY9" target="_blank">
               <BusinessIcon />
-              12345 Hauptstrasse 67, Stuttgart, Germany
+              Junghansstr. 9, 70469 Stuttgart Germany
             </Link>
-            <Link to="mailto:info@gloryphonic.com">
+            <Link to="mailto:gloryphonic@gmail.com">
               <MailOutlineIcon />
-              info@gloryphonic.com
+              gloryphonic@gmail.com
             </Link>
-            <Link to="phone:+49 876 54 321">
+            <Link to="phone:+4916093143373">
               <CallIcon />
-              +49 876 54 321
+              +49 160 93143373
+            </Link>
+            <Link to="phone:+380996579394">
+              <CallIcon />
+              +380 99 6579394
+            </Link>
+            <Link to="phone:+380689145004">
+              <CallIcon />
+              +380 68 9145004
             </Link>
           </div>
           <div className={styles.socialContainer}>
-            <Link to="https://telegram.com" target="_blank">
+            <Link to="https://t.me/gloryphonic" target="_blank">
               <TelegramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
-            <Link to="https://instagram.com" target="_blank">
+            <Link to="https://instagram.com/gloryphonic" target="_blank">
               <InstagramIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
-            <Link to="https://facebook.com" target="_blank">
-              <FacebookIcon fontSize={isDesktop ? 'large' : 'medium'} />
+            <Link to="https://youtube.com/@gloryphonic" target="_blank">
+              <YouTubeIcon fontSize={isDesktop ? 'large' : 'medium'} />
             </Link>
           </div>
         </div>

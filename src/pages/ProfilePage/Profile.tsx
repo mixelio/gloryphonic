@@ -6,9 +6,9 @@ import { useFetchArtists } from '../../hooks/useFetchArtists.tsx';
 import { Divider } from '@mui/material';
 
 export const Profile = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const { artists } = useFetchArtists();
-  const artist = id && artists ? artists.find((artist) => +artist.id === +id) : null;
+  const artist = slug && artists ? artists.find((artist) => artist.slug === slug) : null;
 
   return (
     <>

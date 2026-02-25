@@ -6,26 +6,26 @@ export const ProfileHeroSection = ({ artist }: { artist: Artist }) => {
     <section
       className={styles.profileHeroSection}
       style={{
-        backgroundImage: `url(${artist.cover_image}`,
+        backgroundImage: `url(${artist?.images[0]?.image}`,
       }}
     >
       <div className="container">
         <div className={styles.profileHeroSection__content}>
-          <h1 className={styles.profileHeroSection__title}>{artist.name}</h1>
+          <h1 className={styles.profileHeroSection__title}>{artist?.name}</h1>
           <ul className={styles.profileHeroSection__infoBox}>
             <li>
               <span>Альбоми</span>
-              <span>{artist.albums.length}</span>
+              <span>{artist?.albums?.length}</span>
             </li>
             <li>
               <span>Підписники</span>
-              <span>{artist.followers.length}</span>
+              <span>{artist?.followers?.length}</span>
             </li>{' '}
             <li>
               <span>Жанри</span>
               <span>
-                {artist.genre.map((item) => (
-                  <span>{item}</span>
+                {artist?.genre?.map((item) => (
+                  <span>{item?.name}</span>
                 ))}
               </span>
             </li>{' '}

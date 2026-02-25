@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { Artist } from '../types/Artist.ts';
-import { getArtists } from '../services/artistsGeter.ts';
+import { getArtists } from '../api/users.ts';
 
 export const useFetchArtists = () => {
   const [artists, setArtists] = useState<Artist[]>([]);
@@ -9,10 +9,10 @@ export const useFetchArtists = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const { signal } = controller;
     (async () => {
       try {
-        const data = await getArtists(signal);
+        const data = await getArtists();
+        console.log(data);
         setArtists(data);
       } catch (err) {
         setError('Failed to fetch artists');

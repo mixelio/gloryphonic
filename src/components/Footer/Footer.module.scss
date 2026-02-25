@@ -67,6 +67,8 @@
   }
 
   @include on-desktop {
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 16px;
   }
@@ -86,7 +88,6 @@
     @include on-desktop {
       &:not(:last-child) {
         padding-inline-end: 16px;
-        border-inline-end: 1px solid #aaa;
       }
 
       &:hover {

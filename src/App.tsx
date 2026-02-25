@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.scss';
+import './global.css';
 import { MainPage } from './pages/MainPage/MainPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
@@ -21,7 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/artists',
         element: <Artists />,
-        children: [{ path: ':id?', element: <Profile /> }],
+        children: [
+          { path: ':slug?', element: <Profile /> },
+          { path: '*', element: <NotFoundPage/>}
+        ],
       },
       { path: '/sponsorship', element: <Sponsorship /> },
       { path: '/contacts', element: <ContactsPage /> },
