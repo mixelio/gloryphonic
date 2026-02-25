@@ -11,7 +11,7 @@ export const CommentsByProfile = ({artist}:{artist: Artist}) => {
                 <h2>Залиште свій комментар</h2>
                 <CommentsForm artist={artist} />
                 <Divider sx={{mb: 4, mt: 4}} />
-                <CommentsList />
+                <CommentsList userId={String(artist.id)}/>
             </div>
         </section>
     )

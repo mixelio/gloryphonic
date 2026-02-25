@@ -18,7 +18,7 @@ export type TeamMemberType = {
   id: number;
   name: string;
   position: string;
-  image: string | {};
+  image: string;
 };
 
 export const aboutUsSlides: AboutUsSliderItem[] = [
