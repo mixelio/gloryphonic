@@ -24,8 +24,8 @@ export const ProfileHeroSection = ({ artist }: { artist: Artist }) => {
             <li>
               <span>Жанри</span>
               <span>
-                {artist?.genre?.map((item) => (
-                  <span>{item}</span>
+                {artist?.genres?.map((item) => (
+                  <span>{item.name}</span>
                 ))}
               </span>
             </li>{' '}

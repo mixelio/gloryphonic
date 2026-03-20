@@ -15,7 +15,7 @@ export const SelfDescriptionSection = ({artist}: {artist: Artist }) => {
             <div className="container">
                 <div className={styles.selfDescription__content}>
                     <h2 className={styles.selfDescription__title}>{artist?.name}</h2>
-                    <h3>{artist?.slogan}</h3>
+                    <h3 className={'max-w-[750px] pb-8'}>{artist?.slogan}</h3>
                     <p
                         className={`${styles.selfDescription__text} ${isDescriptionExpanded ? `${styles.expanded}` : ''}`}
                     >

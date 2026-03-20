@@ -6,10 +6,11 @@ export type Artist = {
   avatar: string;
   cover_image: string;
   country: string;
-  genre: string[];
+  genres: { name: string }[];
   description: string;
   slogan: string;
   role: 'artist' | 'admin' | 'manager';
+  videos: { id: number; playlist: string }[];
   socials: {
     facebook?: string;
     instagram?: string;
