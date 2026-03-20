@@ -1,13 +1,13 @@
 import { Navigation } from '../Navigation/Navigation';
-import { UserArea } from '../UserArea/UserArea';
+// import { UserArea } from '../UserArea/UserArea';
 import styles from './Header.module.scss';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import {TopAction} from '../TopAction/TopAction';
 
 export type MenuStatus = 'open' | 'close';
 
 export const Header = () => {
-  const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
+  // const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
   
   return (
     <header className={styles.header}>
@@ -15,7 +15,7 @@ export const Header = () => {
         <div className={styles.headerContent}>
           <TopAction />
           <Navigation />
-          {isDesktop && <UserArea />}
+          {/*{isDesktop && <UserArea />}*/}
         </div>
       </div>
     </header>
