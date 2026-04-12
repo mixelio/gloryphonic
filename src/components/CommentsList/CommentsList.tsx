@@ -6,14 +6,13 @@ import styles from './CommentsList.module.scss';
 import { Chip, Divider } from '@mui/material';
 
 export const CommentsList = ({ userId }: { userId: string }) => {
-  const currentComments = useStore((state) => state.comments);
+  const currentComments = useStore((state) => state.comments).sort((a, b) => Number(new Date(b.created_at)) - Number(new Date(a.created_at)));
 
   const setCurrentComments = useStore((state) => state.setInitialComments);
 
   useEffect(() => {
     (async () => {
       const fetchedComments = await getComments({ userId });
-
       setCurrentComments(fetchedComments);
     })();
   }, []);

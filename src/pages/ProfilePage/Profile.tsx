@@ -11,7 +11,6 @@ export const Profile = () => {
   const { artists } = useFetchArtists();
   const artist = slug && artists ? artists.find((artist) => artist.slug === slug) : null;
 
-  console.log(artist?.genres);
 
   return (
     <>

@@ -12,7 +12,8 @@ interface CommentFromForm {
 }
 
 export const CommentsForm = ({ artist }: { artist: Artist }) => {
-  const { id } = useParams();
+  const { slug } = useParams();
+
   const addComment = useStore((state) => state.addComment);
 
   const [error, setError] = useState<{ nameError: string; textError: string }>({
@@ -22,7 +23,12 @@ export const CommentsForm = ({ artist }: { artist: Artist }) => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!id) return;
+
+    console.log('handleSubmit', 'slug', slug);
+
+    if (!slug) return;
+    if (slug !== artist.slug) return;
+
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
@@ -47,7 +53,9 @@ export const CommentsForm = ({ artist }: { artist: Artist }) => {
 
     if (error.nameError || error.textError) return;
 
-    const comment = await postComment({ userId: String(id), user: data.user, text: data.text });
+
+    console.log(data.user, data.text);
+    const comment = await postComment({ userId: String(artist.slug === slug ? artist.id : null), user: data.user, text: data.text });
 
     addComment(comment);
 

@@ -32,7 +32,7 @@ export const getArtist = async (id: string) => {
 }
 
 export const postComment = async ({userId, user, text}:{userId: string, user: string, text: string}) => {
-
+  console.log('comment post for', userId);
   return await client.post<Comment>(`bands/${userId}/comments/`, {text, user});
 };
 
